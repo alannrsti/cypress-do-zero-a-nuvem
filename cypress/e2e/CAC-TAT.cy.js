@@ -21,7 +21,7 @@ describe("Central de Atendimento ao Cliente TAT", () => {
   it("exibe mensagem de erro ao submeter o formulário com um email com formatação inválida", () => {
     const longText = Cypress._.repeat("Obrigado ", 30);
     cy.get("#firstName").type("Alan");
-    cy.get("#lastName").type("Rodrigues");
+    cy.get("#lastName").type("Rodrigues Silveira");
     cy.get("#email").type("alannrodrigues@gmail,com");
     cy.get("#open-text-area").type(longText, { delay: 0 });
     cy.get('button[type="submit"]').click();
